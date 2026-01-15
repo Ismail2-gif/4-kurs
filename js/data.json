@@ -1,0 +1,23 @@
+
+{
+    "argus":{
+        "name": "Аргус",
+        "age": 1200,
+        "imageUrl": "https://i.pinimg.com/736x/6b/c3/13/6bc313682ba72af3474ef8627428da4d.jpg"
+    },
+    "dyrroth": {
+        "name": "Дариус",
+        "age": 16,
+        "imageUrl": "https://moblegends.ru/wp-content/uploads/2020/02/darius-1.jpg"
+    },
+    "alice":{
+        "name": "Алиса",
+        "age": 1045,
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6yyn4Zg7lv-Ghwk1T4Jgdmdot7O4Chmql_w&s"
+    },
+    "Thamuz":{
+        "name": "Тамуз",
+        "age": 654,
+        "imageUrl": "https://i.pinimg.com/564x/5f/f1/20/5ff120822b4a39f6e2729b812e8bf78f.jpg"
+    }
+}

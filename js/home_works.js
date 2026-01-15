@@ -78,3 +78,4 @@ reset.addEventListener("click", () => {
     sec = 0;
     time.innerHTML = sec;
 });
+
