@@ -8,16 +8,16 @@
     "dyrroth": {
         "name": "Дариус",
         "age": 16,
-        "imageUrl": "https://moblegends.ru/wp-content/uploads/2020/02/darius-1.jpg"
+        "imageUrl": "https://i.pinimg.com/736x/69/67/94/6967948956385f471d21b4b776a01042.jpg"
     },
     "alice":{
         "name": "Алиса",
         "age": 1045,
-        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6yyn4Zg7lv-Ghwk1T4Jgdmdot7O4Chmql_w&s"
+        "imageUrl": "https://img.uhdpaper.com/image6/wallpaper-mobile-thumb/alice-spirit-woman-skin-mobile-legends-uhdpaper.com-4K-6.2861-m.wp.thumbnail.jpg?dl"
     },
-    "Thamuz":{
+    "thamuz":{
         "name": "Тамуз",
         "age": 654,
-        "imageUrl": "https://i.pinimg.com/564x/5f/f1/20/5ff120822b4a39f6e2729b812e8bf78f.jpg"
+        "imageUrl": "https://i.pinimg.com/736x/28/7f/88/287f88d922ea9d4c8bc16778ff42fc03.jpg"
     }
 }

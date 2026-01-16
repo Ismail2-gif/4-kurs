@@ -68,3 +68,24 @@ tabContentBlocks.forEach((button, index) => {
 })
 
 setInterval(nextSlide, 5000)
+
+// weather
+
+const searchInput = document.querySelector("#searchInput")
+const searchButtom = document.querySelector("#search")
+const citi = document.querySelector(".city")
+const temp = document.querySelector(".temp")
+
+const base_url = "https://api.openweathermap.org/data/2.5/weather"
+const api_key = "e417df62e04d3b1b111abeab19cea714"
+
+searchButtom.onclick = () => {
+    fetch(`${base_url}?q=${searchInput.value}&units=metric&lang=ru&appi`)
+    .then(Response => Response.json())
+    .then(data => {
+        console.log(data.name, data.main.temp)
+        citi.innerHTML = data.name
+        temp.innerHTML = data.main.temp
+    })
+    searchInput.value = ""
+}
