@@ -89,3 +89,55 @@ searchButtom.onclick = () => {
     })
     searchInput.value = ""
 }
+
+// Converter
+
+const som = document.querySelector("#som")
+const usd = document.querySelector("#usd")
+const eur = document.querySelector("#eur")
+
+const converter = (element, targetElement) => {
+    element.addEventListener("input", () => {
+        const xhr = new XMLHttpRequest()
+        xhr.open("GET", "../data/converter.json")
+        xhr.send()
+    
+        xhr.onload = () => {
+            const data = JSON.parse(xhr.response)
+            // som
+            if (element.id === "som" && targetElement.id === "usd") {
+                targetElement.value = (element.value / data.usd).toFixed(2)
+            }
+            if (element.id === "som" && targetElement.id === "eur") {
+                targetElement.value = (element.value / data.eur).toFixed(2)
+            }
+            // usd
+            if (element.id === "usd" && targetElement.id === "som") {
+                targetElement.value = (element.value * data.usd).toFixed(2)
+            }
+            if (element.id === "usd" && targetElement.id === "eur") {
+                targetElement.value = (element.value * data.usdInEur).toFixed(2)
+            }
+            // eur
+            if (element.id === "eur" && targetElement.id === "som") {
+                targetElement.value = (element.value * data.eur).toFixed(2)
+            }
+            if (element.id === "eur" && targetElement.id === "usd") {
+                targetElement.value = (element.value * data.eurInUsd).toFixed(2)
+            }
+
+            if (element.value === "") {
+                targetElement.value = ""
+            }
+        }    
+    })
+
+}
+converter(som, usd)
+converter(som, eur)
+
+converter(usd, som)
+converter(usd, eur)
+
+converter(eur, som)
+converter(eur, usd)
