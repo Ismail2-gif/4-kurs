@@ -141,3 +141,47 @@ converter(usd, eur)
 
 converter(eur, som)
 converter(eur, usd)
+
+
+// cart switcer
+
+const card = document.querySelector(".card")
+const btnNext = document.querySelector("#btn-next")
+const btnPrev = document.querySelector("#btn-prev")
+let cardId = 1
+
+const loadCard = () => {
+    fetch(`https://jsonplaceholder.typicode.com/todos/${cardId}`)
+    .then(response => response.json())
+    
+    .then(data => {
+        const {title, completed, id} = data
+        card.style.borderColor = completed ? "green" : "red"
+        card.innerHTML = `
+        <p>${title}</p>
+        <span>${id}</span>
+        `
+    })
+} 
+loadCard()
+
+btnNext.onclick = () => {
+    cardId++
+    if (cardId >= 200) cardId = 1
+    loadCard()
+}
+btnPrev.onclick = () => {
+    cardId--
+    if (cardId === 0) cardId = 200
+    
+    loadCard()
+}
+
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(response => response.json())
+  .then(data => {
+    data.forEach((item, index) => {
+      console.log(index + 1, item)
+    })
+  })
